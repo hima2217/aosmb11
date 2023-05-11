@@ -1,7 +1,10 @@
 package com.example.aosmb11;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import android.os.Bundle;
@@ -11,6 +14,7 @@ import android.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
 
@@ -22,6 +26,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView my_animated_view = findViewById(R.id.my_animated_view);
+
+        my_animated_view.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                animateView(my_animated_view);
+            }
+        });
+
 
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
@@ -51,4 +64,13 @@ public class MainActivity extends Activity {
             }
     });
 }
-}
+
+    private void animateView(ImageView view) {
+        Drawable drawable = view.getDrawable();
+        if (drawable instanceof AnimatedVectorDrawableCompat) {
+            ((AnimatedVectorDrawableCompat) drawable).start();
+        } else if (drawable instanceof AnimatedVectorDrawable) {
+            ((AnimatedVectorDrawable) drawable).start();
+        }
+        }
+    }
