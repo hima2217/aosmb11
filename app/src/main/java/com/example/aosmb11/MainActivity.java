@@ -63,6 +63,7 @@ public class MainActivity extends Activity {
                 ft.commit();
             }
     });
+
 }
 
     private void animateView(ImageView view) {

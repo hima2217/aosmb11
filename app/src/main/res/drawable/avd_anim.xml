@@ -11,22 +11,22 @@
             <path
                 android:name="border"
                 android:pathData="M 0 0 L 0 24 L 24 24 L 24 0 L 0 0"
-                android:strokeColor="#888888"
+                android:strokeColor="#7fffd4"
                 android:strokeWidth="2"/>
             <path
                 android:name="check"
                 android:pathData="M 4 12 L 9 18 L 20 7"
-                android:strokeColor="#000000"
+                android:strokeColor="#80002b"
                 android:strokeWidth="2"
                 android:strokeLineCap="round"
-                android:strokeMiterLimit="5"/>
+                android:strokeMiterLimit="10"/>
         </vector>
     </aapt:attr>
     <target android:name="check">
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:propertyName="trimPathEnd"
-                android:duration="500"
+                android:duration="1000"
                 android:valueFrom="0"
                 android:valueTo="1"
                 android:valueType="floatType"

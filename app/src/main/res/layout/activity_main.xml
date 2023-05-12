@@ -1,28 +1,40 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="true"
     tools:context=".MainActivity">
 
     <FrameLayout
         android:id="@+id/fragCont"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
         android:layout_weight="1">
 
         <Button
             android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SWITCH FRAGMENTS" />
+            android:layout_width="153dp"
+            android:layout_height="71dp"
+            android:background="#E80F0F"
+            android:backgroundTint="#F80707"
+            android:foregroundTint="#E60D0D"
+            android:text="Смена окна"
+            app:strokeColor="#EA0B0B" />
 
         <ImageView
             android:id="@+id/my_animated_view"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="320dp"
+            android:layout_height="330dp"
+            android:backgroundTint="#DC2828"
             android:src="@drawable/avd_anim"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
